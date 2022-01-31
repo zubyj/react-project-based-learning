@@ -10,10 +10,20 @@ function App() {
   const [menu, setMenu] = useState(items);
   const [categories, setCategories] = useState(allCategories);
 
-  const filterItems = (category) => { 
-    if (category === 'all') { setMenu(items); return; }
+  const filterItems = (category) => {
+    // since we cant sort menu items by 'all' category, special return condition.
+    if (category === 'all') {
+      setMenu(items); 
+      return;
+    }
+    // else filter menu items by category and change the menu
+    // variable states 
+    // click breakfast. menu = full menu. newMenu = 3 breakfast items. menu = 3bf 
+    // click lunch. menu=fm, newMenu=lm, menu = lm?
     setMenu(items);
-    const newMenu = menu.filter((item) => item.category === category);
+    // do you know why this doesnt work'
+    // because we cant modify state directly, that applies to filter too?
+    const newMenu = items.filter((item) => item.category === category);
     setMenu(newMenu);
   }
 
