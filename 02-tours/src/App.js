@@ -23,7 +23,7 @@ function App() {
     console.log(tours);
   };
 
-  // Telling react the component needs to do something after render.
+  // Telling react to fetch tours after the page renders
   useEffect(() => {
     fetchTours();
   }, [])

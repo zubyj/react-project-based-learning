@@ -33,7 +33,7 @@ const Review = () => {
     setIndex((index) => {
       const max = people.length;
       const randomIndex =  Math.floor(Math.random() * max);
-      // avoid repeating same perseon
+      // avoid repeating same person
       if (randomIndex === index) {
         return checkNumber(index+1);
       }
