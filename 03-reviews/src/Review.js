@@ -5,7 +5,6 @@ import { FaChevronLeft, FaChevronRight, FaQuoteRight } from 'react-icons/fa';
 
 const Review = () => {
   const [index , setIndex] = useState(0);
-  console.log(people);
   const {name, job, image, text} = people[index];
 
   const checkNumber = (number) => {
@@ -20,15 +19,13 @@ const Review = () => {
 
   const prevPerson = () => {
     setIndex((index) => {
-      let newIndex = index -1;
-      return checkNumber(newIndex);
+      return checkNumber(index-1);
     });
   };
 
   const nextPerson = () => {
     setIndex((index) => {
-      let newIndex = index -1;
-      return checkNumber(newIndex);
+      return checkNumber(index+1);
     });
   };
 

@@ -9,7 +9,7 @@ function App() {
   return <main>
     <section className="container">
     <h3>{people.length} birthdays today</h3>
-    <List people={showPeople ? people : []}/>
+    <List people={showPeople ? people : []} />
     <button onClick={() => setShowPeople(!showPeople)}>
         {showPeople ? 'Collapse ' : 'Show'} Birthdays
     </button>
