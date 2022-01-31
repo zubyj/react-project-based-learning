@@ -17,12 +17,7 @@ function App() {
       return;
     }
     // else filter menu items by category and change the menu
-    // variable states 
-    // click breakfast. menu = full menu. newMenu = 3 breakfast items. menu = 3bf 
-    // click lunch. menu=fm, newMenu=lm, menu = lm?
     setMenu(items);
-    // do you know why this doesnt work'
-    // because we cant modify state directly, that applies to filter too?
     const newMenu = items.filter((item) => item.category === category);
     setMenu(newMenu);
   }
