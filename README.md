@@ -1,5 +1,4 @@
-# React projects
-### Collection of small projects to learn React
+# Learning React with project based learning
 
 These projects were made from following this [tutorial](https://github.com/john-smilga/react-projects)
 
